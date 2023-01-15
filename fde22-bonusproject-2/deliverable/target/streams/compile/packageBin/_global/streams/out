@@ -1,0 +1,19 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/sergeytereshkin/Downloads/fde22-bonusproject-2/deliverable/target/scala-2.12/return-trip-test_2.12-1.0.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReturnTripTestExtended.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sergeytereshkin/Downloads/fde22-bonusproject-2/deliverable/target/scala-2.12/classes/ReturnTripTestExtended.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReturnTrips$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sergeytereshkin/Downloads/fde22-bonusproject-2/deliverable/target/scala-2.12/classes/ReturnTrips$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReturnTripTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sergeytereshkin/Downloads/fde22-bonusproject-2/deliverable/target/scala-2.12/classes/ReturnTripTest.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReturnTrips.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sergeytereshkin/Downloads/fde22-bonusproject-2/deliverable/target/scala-2.12/classes/ReturnTrips.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReturnTripSubmit$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sergeytereshkin/Downloads/fde22-bonusproject-2/deliverable/target/scala-2.12/classes/ReturnTripSubmit$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReturnTripSubmit.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sergeytereshkin/Downloads/fde22-bonusproject-2/deliverable/target/scala-2.12/classes/ReturnTripSubmit.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReturnTripTest$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sergeytereshkin/Downloads/fde22-bonusproject-2/deliverable/target/scala-2.12/classes/ReturnTripTest$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	ReturnTripTestExtended$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/sergeytereshkin/Downloads/fde22-bonusproject-2/deliverable/target/scala-2.12/classes/ReturnTripTestExtended$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
