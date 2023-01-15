@@ -1,0 +1,1 @@
+cmd='/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake;-DCMAKE_INSTALL_PREFIX=/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark;-DCMAKE_C_COMPILER=/usr/bin/gcc;-DCMAKE_CXX_COMPILER=/usr/bin/g++;-DCMAKE_CXX_FLAGS= -pthread;-DCMAKE_BUILD_TYPE:STRING=Debug;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'

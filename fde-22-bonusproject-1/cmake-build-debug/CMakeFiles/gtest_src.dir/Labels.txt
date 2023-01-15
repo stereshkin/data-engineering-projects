@@ -1,0 +1,13 @@
+# Target labels
+ gtest_src
+# Source files and their labels
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/gtest_src
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/gtest_src.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/gtest_src-complete.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-build.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-configure.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-download.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-install.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-mkdir.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-patch.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-update.rule

@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/benchmark_src"
+		},
+		{
+			"file" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/benchmark_src.rule"
+		},
+		{
+			"file" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/benchmark_src-complete.rule"
+		},
+		{
+			"file" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-build.rule"
+		},
+		{
+			"file" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-configure.rule"
+		},
+		{
+			"file" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-download.rule"
+		},
+		{
+			"file" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-install.rule"
+		},
+		{
+			"file" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-mkdir.rule"
+		},
+		{
+			"file" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-patch.rule"
+		},
+		{
+			"file" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"benchmark_src"
+		],
+		"name" : "benchmark_src"
+	}
+}

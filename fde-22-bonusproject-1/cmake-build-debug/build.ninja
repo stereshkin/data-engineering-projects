@@ -1,0 +1,583 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: bonusTpchJoin
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/
+
+#############################################
+# Utility command for googletest
+
+build googletest: phony CMakeFiles/googletest CMakeFiles/googletest-complete vendor/gtm/src/googletest-stamp/googletest-done vendor/gtm/src/googletest-stamp/googletest-build vendor/gtm/src/googletest-stamp/googletest-configure vendor/gtm/src/googletest-stamp/googletest-download vendor/gtm/src/googletest-stamp/googletest-install vendor/gtm/src/googletest-stamp/googletest-mkdir vendor/gtm/src/googletest-stamp/googletest-patch vendor/gtm/src/googletest-stamp/googletest-update
+
+
+#############################################
+# Utility command for gtest_src
+
+build gtest_src: phony CMakeFiles/gtest_src CMakeFiles/gtest_src-complete vendor/gtm/src/gtest_src-stamp/gtest_src-done vendor/gtm/src/gtest_src-stamp/gtest_src-build vendor/gtm/src/gtest_src-stamp/gtest_src-configure vendor/gtm/src/gtest_src-stamp/gtest_src-download vendor/gtm/src/gtest_src-stamp/gtest_src-install vendor/gtm/src/gtest_src-stamp/gtest_src-mkdir vendor/gtm/src/gtest_src-stamp/gtest_src-patch vendor/gtm/src/gtest_src-stamp/gtest_src-update googletest
+
+
+#############################################
+# Utility command for gmock_src
+
+build gmock_src: phony CMakeFiles/gmock_src CMakeFiles/gmock_src-complete vendor/gtm/src/gmock_src-stamp/gmock_src-done vendor/gtm/src/gmock_src-stamp/gmock_src-build vendor/gtm/src/gmock_src-stamp/gmock_src-configure vendor/gtm/src/gmock_src-stamp/gmock_src-download vendor/gtm/src/gmock_src-stamp/gmock_src-install vendor/gtm/src/gmock_src-stamp/gmock_src-mkdir vendor/gtm/src/gmock_src-stamp/gmock_src-patch vendor/gtm/src/gmock_src-stamp/gmock_src-update googletest
+
+
+#############################################
+# Utility command for benchmark_src
+
+build benchmark_src: phony CMakeFiles/benchmark_src CMakeFiles/benchmark_src-complete vendor/benchmark/src/benchmark_src-stamp/benchmark_src-done vendor/benchmark/src/benchmark_src-stamp/benchmark_src-build vendor/benchmark/src/benchmark_src-stamp/benchmark_src-configure vendor/benchmark/src/benchmark_src-stamp/benchmark_src-download vendor/benchmark/src/benchmark_src-stamp/benchmark_src-install vendor/benchmark/src/benchmark_src-stamp/benchmark_src-mkdir vendor/benchmark/src/benchmark_src-stamp/benchmark_src-patch vendor/benchmark/src/benchmark_src-stamp/benchmark_src-update
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target join_query
+
+
+#############################################
+# Order-only phony target for join_query
+
+build cmake_object_order_depends_target_join_query: phony || CMakeFiles/join_query.dir
+
+build CMakeFiles/join_query.dir/src/JoinQuery.cpp.o: CXX_COMPILER__join_query_Debug /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/src/JoinQuery.cpp || cmake_object_order_depends_target_join_query
+  DEP_FILE = CMakeFiles/join_query.dir/src/JoinQuery.cpp.o.d
+  FLAGS = -pthread -std=c++14 -fPIC -Wall -Wextra -fno-omit-frame-pointer -march=native -Wno-unknown-pragmas  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  INCLUDES = -I/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/include -I/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/src
+  OBJECT_DIR = CMakeFiles/join_query.dir
+  OBJECT_FILE_DIR = CMakeFiles/join_query.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target join_query
+
+
+#############################################
+# Link the static library libjoin_query.a
+
+build libjoin_query.a: CXX_STATIC_LIBRARY_LINKER__join_query_Debug CMakeFiles/join_query.dir/src/JoinQuery.cpp.o
+  ARCH_FLAGS = -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LANGUAGE_COMPILE_FLAGS = -pthread -std=c++14 -fPIC -Wall -Wextra -fno-omit-frame-pointer -march=native -Wno-unknown-pragmas  -g
+  OBJECT_DIR = CMakeFiles/join_query.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libjoin_query.a
+  TARGET_PDB = join_query.a.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target test_all
+
+
+#############################################
+# Order-only phony target for test_all
+
+build cmake_object_order_depends_target_test_all: phony || cmake_object_order_depends_target_join_query gtest_src
+
+build CMakeFiles/test_all.dir/test/JoinQuery.cpp.o: CXX_COMPILER__test_all_Debug /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/test/JoinQuery.cpp || cmake_object_order_depends_target_test_all
+  DEP_FILE = CMakeFiles/test_all.dir/test/JoinQuery.cpp.o.d
+  FLAGS = -pthread -std=c++14 -fPIC -Wall -Wextra -fno-omit-frame-pointer -march=native -Wno-unknown-pragmas  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  INCLUDES = -I/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/include -isystem /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/gtest/include
+  OBJECT_DIR = CMakeFiles/test_all.dir
+  OBJECT_FILE_DIR = CMakeFiles/test_all.dir/test
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target test_all
+
+
+#############################################
+# Link the executable test_all
+
+build test_all: CXX_EXECUTABLE_LINKER__test_all_Debug CMakeFiles/test_all.dir/test/JoinQuery.cpp.o | libjoin_query.a vendor/gtm/gtest/lib/libgtest.a vendor/gtm/gtest/lib/libgtest_main.a || gtest_src libjoin_query.a
+  FLAGS = -pthread -std=c++14 -fPIC -Wall -Wextra -fno-omit-frame-pointer -march=native -Wno-unknown-pragmas  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = libjoin_query.a  vendor/gtm/gtest/lib/libgtest.a  vendor/gtm/gtest/lib/libgtest_main.a  -lpthread
+  OBJECT_DIR = CMakeFiles/test_all.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = test_all
+  TARGET_PDB = test_all.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target bench
+
+
+#############################################
+# Order-only phony target for bench
+
+build cmake_object_order_depends_target_bench: phony || benchmark_src cmake_object_order_depends_target_join_query
+
+build CMakeFiles/bench.dir/bench/JoinQuery.cpp.o: CXX_COMPILER__bench_Debug /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/bench/JoinQuery.cpp || cmake_object_order_depends_target_bench
+  DEP_FILE = CMakeFiles/bench.dir/bench/JoinQuery.cpp.o.d
+  FLAGS = -pthread -std=c++14 -fPIC -Wall -Wextra -fno-omit-frame-pointer -march=native -Wno-unknown-pragmas  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  INCLUDES = -I/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/include -isystem /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/include
+  OBJECT_DIR = CMakeFiles/bench.dir
+  OBJECT_FILE_DIR = CMakeFiles/bench.dir/bench
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target bench
+
+
+#############################################
+# Link the executable bench
+
+build bench: CXX_EXECUTABLE_LINKER__bench_Debug CMakeFiles/bench.dir/bench/JoinQuery.cpp.o | vendor/benchmark/lib/libbenchmark.a libjoin_query.a || benchmark_src libjoin_query.a
+  FLAGS = -pthread -std=c++14 -fPIC -Wall -Wextra -fno-omit-frame-pointer -march=native -Wno-unknown-pragmas  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = vendor/benchmark/lib/libbenchmark.a  libjoin_query.a  -lpthread
+  OBJECT_DIR = CMakeFiles/bench.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = bench
+  TARGET_PDB = bench.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target main
+
+
+#############################################
+# Order-only phony target for main
+
+build cmake_object_order_depends_target_main: phony || cmake_object_order_depends_target_join_query
+
+build CMakeFiles/main.dir/src/main.cpp.o: CXX_COMPILER__main_Debug /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/src/main.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles/main.dir/src/main.cpp.o.d
+  FLAGS = -pthread -std=c++14 -fPIC -Wall -Wextra -fno-omit-frame-pointer -march=native -Wno-unknown-pragmas  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++17
+  INCLUDES = -I/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/include
+  OBJECT_DIR = CMakeFiles/main.dir
+  OBJECT_FILE_DIR = CMakeFiles/main.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target main
+
+
+#############################################
+# Link the executable main
+
+build main: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/main.cpp.o | libjoin_query.a || libjoin_query.a
+  FLAGS = -pthread -std=c++14 -fPIC -Wall -Wextra -fno-omit-frame-pointer -march=native -Wno-unknown-pragmas  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = libjoin_query.a
+  OBJECT_DIR = CMakeFiles/main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = main
+  TARGET_PDB = main.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1 -B/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Phony custom command for CMakeFiles/googletest
+
+build CMakeFiles/googletest | ${cmake_ninja_workdir}CMakeFiles/googletest: phony CMakeFiles/googletest-complete
+
+
+#############################################
+# Custom command for CMakeFiles/googletest-complete
+
+build CMakeFiles/googletest-complete vendor/gtm/src/googletest-stamp/googletest-done | ${cmake_ninja_workdir}CMakeFiles/googletest-complete ${cmake_ninja_workdir}vendor/gtm/src/googletest-stamp/googletest-done: CUSTOM_COMMAND vendor/gtm/src/googletest-stamp/googletest-install vendor/gtm/src/googletest-stamp/googletest-mkdir vendor/gtm/src/googletest-stamp/googletest-download vendor/gtm/src/googletest-stamp/googletest-update vendor/gtm/src/googletest-stamp/googletest-patch vendor/gtm/src/googletest-stamp/googletest-configure vendor/gtm/src/googletest-stamp/googletest-build vendor/gtm/src/googletest-stamp/googletest-install
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E make_directory /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/googletest-complete && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-stamp/googletest-done
+  DESC = Completed 'googletest'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/googletest-stamp/googletest-build
+
+build vendor/gtm/src/googletest-stamp/googletest-build | ${cmake_ninja_workdir}vendor/gtm/src/googletest-stamp/googletest-build: CUSTOM_COMMAND vendor/gtm/src/googletest-stamp/googletest-configure
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-stamp/googletest-build
+  DESC = No build step for 'googletest'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/googletest-stamp/googletest-configure
+
+build vendor/gtm/src/googletest-stamp/googletest-configure | ${cmake_ninja_workdir}vendor/gtm/src/googletest-stamp/googletest-configure: CUSTOM_COMMAND vendor/gtm/tmp/googletest-cfgcmd.txt vendor/gtm/src/googletest-stamp/googletest-patch
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-stamp/googletest-configure
+  DESC = No configure step for 'googletest'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/googletest-stamp/googletest-download
+
+build vendor/gtm/src/googletest-stamp/googletest-download | ${cmake_ninja_workdir}vendor/gtm/src/googletest-stamp/googletest-download: CUSTOM_COMMAND vendor/gtm/src/googletest-stamp/googletest-gitinfo.txt vendor/gtm/src/googletest-stamp/googletest-mkdir
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/tmp/googletest-gitclone.cmake && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-stamp/googletest-download
+  DESC = Performing download step (git clone) for 'googletest'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/googletest-stamp/googletest-install
+
+build vendor/gtm/src/googletest-stamp/googletest-install | ${cmake_ninja_workdir}vendor/gtm/src/googletest-stamp/googletest-install: CUSTOM_COMMAND vendor/gtm/src/googletest-stamp/googletest-build
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-stamp/googletest-install
+  DESC = No install step for 'googletest'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/googletest-stamp/googletest-mkdir
+
+build vendor/gtm/src/googletest-stamp/googletest-mkdir | ${cmake_ninja_workdir}vendor/gtm/src/googletest-stamp/googletest-mkdir: CUSTOM_COMMAND
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/tmp/googletest-mkdirs.cmake && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-stamp/googletest-mkdir
+  DESC = Creating directories for 'googletest'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/googletest-stamp/googletest-patch
+
+build vendor/gtm/src/googletest-stamp/googletest-patch | ${cmake_ninja_workdir}vendor/gtm/src/googletest-stamp/googletest-patch: CUSTOM_COMMAND vendor/gtm/src/googletest-stamp/googletest-update
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-stamp/googletest-patch
+  DESC = No patch step for 'googletest'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/googletest-stamp/googletest-update
+
+build vendor/gtm/src/googletest-stamp/googletest-update | ${cmake_ninja_workdir}vendor/gtm/src/googletest-stamp/googletest-update: CUSTOM_COMMAND vendor/gtm/src/googletest-stamp/googletest-download
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest-stamp/googletest-update
+  DESC = No update step for 'googletest'
+  restat = 1
+
+
+#############################################
+# Phony custom command for CMakeFiles/gtest_src
+
+build CMakeFiles/gtest_src | ${cmake_ninja_workdir}CMakeFiles/gtest_src: phony CMakeFiles/gtest_src-complete || googletest
+
+
+#############################################
+# Custom command for CMakeFiles/gtest_src-complete
+
+build CMakeFiles/gtest_src-complete vendor/gtm/src/gtest_src-stamp/gtest_src-done | ${cmake_ninja_workdir}CMakeFiles/gtest_src-complete ${cmake_ninja_workdir}vendor/gtm/src/gtest_src-stamp/gtest_src-done: CUSTOM_COMMAND vendor/gtm/src/gtest_src-stamp/gtest_src-install vendor/gtm/src/gtest_src-stamp/gtest_src-mkdir vendor/gtm/src/gtest_src-stamp/gtest_src-download vendor/gtm/src/gtest_src-stamp/gtest_src-update vendor/gtm/src/gtest_src-stamp/gtest_src-patch vendor/gtm/src/gtest_src-stamp/gtest_src-configure vendor/gtm/src/gtest_src-stamp/gtest_src-build vendor/gtm/src/gtest_src-stamp/gtest_src-install || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E make_directory /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/gtest_src-complete && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-done
+  DESC = Completed 'gtest_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gtest_src-stamp/gtest_src-build
+
+build vendor/gtm/src/gtest_src-stamp/gtest_src-build | ${cmake_ninja_workdir}vendor/gtm/src/gtest_src-stamp/gtest_src-build: CUSTOM_COMMAND vendor/gtm/src/gtest_src-stamp/gtest_src-configure || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --build . && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-build
+  DESC = Performing build step for 'gtest_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gtest_src-stamp/gtest_src-configure
+
+build vendor/gtm/src/gtest_src-stamp/gtest_src-configure | ${cmake_ninja_workdir}vendor/gtm/src/gtest_src-stamp/gtest_src-configure: CUSTOM_COMMAND vendor/gtm/tmp/gtest_src-cfgcmd.txt vendor/gtm/src/gtest_src-stamp/gtest_src-patch || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_PREFIX=/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/gtest -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ "-DCMAKE_CXX_FLAGS= -pthread" -GNinja /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-configure
+  DESC = Performing configure step for 'gtest_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gtest_src-stamp/gtest_src-download
+
+build vendor/gtm/src/gtest_src-stamp/gtest_src-download | ${cmake_ninja_workdir}vendor/gtm/src/gtest_src-stamp/gtest_src-download: CUSTOM_COMMAND vendor/gtm/src/gtest_src-stamp/gtest_src-custominfo.txt vendor/gtm/src/gtest_src-stamp/gtest_src-mkdir || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-download
+  DESC = No download step for 'gtest_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gtest_src-stamp/gtest_src-install
+
+build vendor/gtm/src/gtest_src-stamp/gtest_src-install | ${cmake_ninja_workdir}vendor/gtm/src/gtest_src-stamp/gtest_src-install: CUSTOM_COMMAND vendor/gtm/src/gtest_src-stamp/gtest_src-build || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --build . --target install && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-install
+  DESC = Performing install step for 'gtest_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gtest_src-stamp/gtest_src-mkdir
+
+build vendor/gtm/src/gtest_src-stamp/gtest_src-mkdir | ${cmake_ninja_workdir}vendor/gtm/src/gtest_src-stamp/gtest_src-mkdir: CUSTOM_COMMAND || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/tmp/gtest_src-mkdirs.cmake && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-mkdir
+  DESC = Creating directories for 'gtest_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gtest_src-stamp/gtest_src-patch
+
+build vendor/gtm/src/gtest_src-stamp/gtest_src-patch | ${cmake_ninja_workdir}vendor/gtm/src/gtest_src-stamp/gtest_src-patch: CUSTOM_COMMAND vendor/gtm/src/gtest_src-stamp/gtest_src-update || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-patch
+  DESC = No patch step for 'gtest_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gtest_src-stamp/gtest_src-update
+
+build vendor/gtm/src/gtest_src-stamp/gtest_src-update | ${cmake_ninja_workdir}vendor/gtm/src/gtest_src-stamp/gtest_src-update: CUSTOM_COMMAND vendor/gtm/src/gtest_src-stamp/gtest_src-download || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest/googletest && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gtest_src-stamp/gtest_src-update
+  DESC = No update step for 'gtest_src'
+  restat = 1
+
+
+#############################################
+# Phony custom command for CMakeFiles/gmock_src
+
+build CMakeFiles/gmock_src | ${cmake_ninja_workdir}CMakeFiles/gmock_src: phony CMakeFiles/gmock_src-complete || googletest
+
+
+#############################################
+# Custom command for CMakeFiles/gmock_src-complete
+
+build CMakeFiles/gmock_src-complete vendor/gtm/src/gmock_src-stamp/gmock_src-done | ${cmake_ninja_workdir}CMakeFiles/gmock_src-complete ${cmake_ninja_workdir}vendor/gtm/src/gmock_src-stamp/gmock_src-done: CUSTOM_COMMAND vendor/gtm/src/gmock_src-stamp/gmock_src-install vendor/gtm/src/gmock_src-stamp/gmock_src-mkdir vendor/gtm/src/gmock_src-stamp/gmock_src-download vendor/gtm/src/gmock_src-stamp/gmock_src-update vendor/gtm/src/gmock_src-stamp/gmock_src-patch vendor/gtm/src/gmock_src-stamp/gmock_src-configure vendor/gtm/src/gmock_src-stamp/gmock_src-build vendor/gtm/src/gmock_src-stamp/gmock_src-install || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E make_directory /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/gmock_src-complete && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-done
+  DESC = Completed 'gmock_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gmock_src-stamp/gmock_src-build
+
+build vendor/gtm/src/gmock_src-stamp/gmock_src-build | ${cmake_ninja_workdir}vendor/gtm/src/gmock_src-stamp/gmock_src-build: CUSTOM_COMMAND vendor/gtm/src/gmock_src-stamp/gmock_src-configure || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --build . && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-build
+  DESC = Performing build step for 'gmock_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gmock_src-stamp/gmock_src-configure
+
+build vendor/gtm/src/gmock_src-stamp/gmock_src-configure | ${cmake_ninja_workdir}vendor/gtm/src/gmock_src-stamp/gmock_src-configure: CUSTOM_COMMAND vendor/gtm/tmp/gmock_src-cfgcmd.txt vendor/gtm/src/gmock_src-stamp/gmock_src-patch || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_PREFIX=/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/gmock -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ "-DCMAKE_CXX_FLAGS= -pthread" -GNinja /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-configure
+  DESC = Performing configure step for 'gmock_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gmock_src-stamp/gmock_src-download
+
+build vendor/gtm/src/gmock_src-stamp/gmock_src-download | ${cmake_ninja_workdir}vendor/gtm/src/gmock_src-stamp/gmock_src-download: CUSTOM_COMMAND vendor/gtm/src/gmock_src-stamp/gmock_src-custominfo.txt vendor/gtm/src/gmock_src-stamp/gmock_src-mkdir || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-download
+  DESC = No download step for 'gmock_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gmock_src-stamp/gmock_src-install
+
+build vendor/gtm/src/gmock_src-stamp/gmock_src-install | ${cmake_ninja_workdir}vendor/gtm/src/gmock_src-stamp/gmock_src-install: CUSTOM_COMMAND vendor/gtm/src/gmock_src-stamp/gmock_src-build || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --build . --target install && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-install
+  DESC = Performing install step for 'gmock_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gmock_src-stamp/gmock_src-mkdir
+
+build vendor/gtm/src/gmock_src-stamp/gmock_src-mkdir | ${cmake_ninja_workdir}vendor/gtm/src/gmock_src-stamp/gmock_src-mkdir: CUSTOM_COMMAND || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/tmp/gmock_src-mkdirs.cmake && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-mkdir
+  DESC = Creating directories for 'gmock_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gmock_src-stamp/gmock_src-patch
+
+build vendor/gtm/src/gmock_src-stamp/gmock_src-patch | ${cmake_ninja_workdir}vendor/gtm/src/gmock_src-stamp/gmock_src-patch: CUSTOM_COMMAND vendor/gtm/src/gmock_src-stamp/gmock_src-update || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-patch
+  DESC = No patch step for 'gmock_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/gtm/src/gmock_src-stamp/gmock_src-update
+
+build vendor/gtm/src/gmock_src-stamp/gmock_src-update | ${cmake_ninja_workdir}vendor/gtm/src/gmock_src-stamp/gmock_src-update: CUSTOM_COMMAND vendor/gtm/src/gmock_src-stamp/gmock_src-download || googletest
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/googletest/googlemock && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-update
+  DESC = No update step for 'gmock_src'
+  restat = 1
+
+
+#############################################
+# Phony custom command for CMakeFiles/benchmark_src
+
+build CMakeFiles/benchmark_src | ${cmake_ninja_workdir}CMakeFiles/benchmark_src: phony CMakeFiles/benchmark_src-complete
+
+
+#############################################
+# Custom command for CMakeFiles/benchmark_src-complete
+
+build CMakeFiles/benchmark_src-complete vendor/benchmark/src/benchmark_src-stamp/benchmark_src-done | ${cmake_ninja_workdir}CMakeFiles/benchmark_src-complete ${cmake_ninja_workdir}vendor/benchmark/src/benchmark_src-stamp/benchmark_src-done: CUSTOM_COMMAND vendor/benchmark/src/benchmark_src-stamp/benchmark_src-install vendor/benchmark/src/benchmark_src-stamp/benchmark_src-mkdir vendor/benchmark/src/benchmark_src-stamp/benchmark_src-download vendor/benchmark/src/benchmark_src-stamp/benchmark_src-update vendor/benchmark/src/benchmark_src-stamp/benchmark_src-patch vendor/benchmark/src/benchmark_src-stamp/benchmark_src-configure vendor/benchmark/src/benchmark_src-stamp/benchmark_src-build vendor/benchmark/src/benchmark_src-stamp/benchmark_src-install
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E make_directory /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/benchmark_src-complete && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-done
+  DESC = Completed 'benchmark_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/benchmark/src/benchmark_src-stamp/benchmark_src-build
+
+build vendor/benchmark/src/benchmark_src-stamp/benchmark_src-build | ${cmake_ninja_workdir}vendor/benchmark/src/benchmark_src-stamp/benchmark_src-build: CUSTOM_COMMAND vendor/benchmark/src/benchmark_src-stamp/benchmark_src-configure
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --build . && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-build
+  DESC = Performing build step for 'benchmark_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/benchmark/src/benchmark_src-stamp/benchmark_src-configure
+
+build vendor/benchmark/src/benchmark_src-stamp/benchmark_src-configure | ${cmake_ninja_workdir}vendor/benchmark/src/benchmark_src-stamp/benchmark_src-configure: CUSTOM_COMMAND vendor/benchmark/tmp/benchmark_src-cfgcmd.txt vendor/benchmark/src/benchmark_src-stamp/benchmark_src-patch
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_PREFIX=/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ "-DCMAKE_CXX_FLAGS= -pthread" -DCMAKE_BUILD_TYPE:STRING=Debug -GNinja /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-configure
+  DESC = Performing configure step for 'benchmark_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/benchmark/src/benchmark_src-stamp/benchmark_src-download
+
+build vendor/benchmark/src/benchmark_src-stamp/benchmark_src-download | ${cmake_ninja_workdir}vendor/benchmark/src/benchmark_src-stamp/benchmark_src-download: CUSTOM_COMMAND vendor/benchmark/src/benchmark_src-stamp/benchmark_src-gitinfo.txt vendor/benchmark/src/benchmark_src-stamp/benchmark_src-mkdir
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/tmp/benchmark_src-gitclone.cmake && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-download
+  DESC = Performing download step (git clone) for 'benchmark_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/benchmark/src/benchmark_src-stamp/benchmark_src-install
+
+build vendor/benchmark/src/benchmark_src-stamp/benchmark_src-install | ${cmake_ninja_workdir}vendor/benchmark/src/benchmark_src-stamp/benchmark_src-install: CUSTOM_COMMAND vendor/benchmark/src/benchmark_src-stamp/benchmark_src-build
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-build && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --build . --target install && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-install
+  DESC = Performing install step for 'benchmark_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/benchmark/src/benchmark_src-stamp/benchmark_src-mkdir
+
+build vendor/benchmark/src/benchmark_src-stamp/benchmark_src-mkdir | ${cmake_ninja_workdir}vendor/benchmark/src/benchmark_src-stamp/benchmark_src-mkdir: CUSTOM_COMMAND
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/tmp/benchmark_src-mkdirs.cmake && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-mkdir
+  DESC = Creating directories for 'benchmark_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/benchmark/src/benchmark_src-stamp/benchmark_src-patch
+
+build vendor/benchmark/src/benchmark_src-stamp/benchmark_src-patch | ${cmake_ninja_workdir}vendor/benchmark/src/benchmark_src-stamp/benchmark_src-patch: CUSTOM_COMMAND vendor/benchmark/src/benchmark_src-stamp/benchmark_src-update
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-patch
+  DESC = No patch step for 'benchmark_src'
+  restat = 1
+
+
+#############################################
+# Custom command for vendor/benchmark/src/benchmark_src-stamp/benchmark_src-update
+
+build vendor/benchmark/src/benchmark_src-stamp/benchmark_src-update | ${cmake_ninja_workdir}vendor/benchmark/src/benchmark_src-stamp/benchmark_src-update: CUSTOM_COMMAND vendor/benchmark/src/benchmark_src-stamp/benchmark_src-download
+  COMMAND = cd /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo_append && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E touch /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-update
+  DESC = No update step for 'benchmark_src'
+  restat = 1
+
+# =============================================================================
+# Target aliases.
+
+build join_query: phony libjoin_query.a
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug
+
+build all: phony googletest gtest_src gmock_src benchmark_src libjoin_query.a test_all bench main
+
+# =============================================================================
+# Unknown Build Time Dependencies.
+# Tell Ninja that they may appear as side effects of build rules
+# otherwise ordered by order-only dependencies.
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../lib/benchmark.cmake ../lib/gtest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/ExternalProject.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/ExternalProject/RepositoryInfo.txt.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/ExternalProject/cfgcmd.txt.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/ExternalProject/gitclone.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/ExternalProject/mkdirs.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindGit.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake vendor/benchmark/tmp/benchmark_src-mkdirs.cmake vendor/gtm/tmp/gmock_src-mkdirs.cmake vendor/gtm/tmp/googletest-mkdirs.cmake vendor/gtm/tmp/gtest_src-mkdirs.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt ../lib/benchmark.cmake ../lib/gtest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/ExternalProject.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/ExternalProject/RepositoryInfo.txt.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/ExternalProject/cfgcmd.txt.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/ExternalProject/gitclone.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/ExternalProject/mkdirs.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindGit.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake vendor/benchmark/tmp/benchmark_src-mkdirs.cmake vendor/gtm/tmp/gmock_src-mkdirs.cmake vendor/gtm/tmp/googletest-mkdirs.cmake vendor/gtm/tmp/gtest_src-mkdirs.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

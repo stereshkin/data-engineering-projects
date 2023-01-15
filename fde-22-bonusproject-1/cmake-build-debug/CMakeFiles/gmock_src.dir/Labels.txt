@@ -1,0 +1,13 @@
+# Target labels
+ gmock_src
+# Source files and their labels
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/gmock_src
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/gmock_src.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/gmock_src-complete.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-build.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-configure.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-download.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-install.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-mkdir.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-patch.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/gtm/src/gmock_src-stamp/gmock_src-update.rule

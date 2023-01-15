@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "bonusTpchJoin",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "bench::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bench-Debug-5405a2f6ac145c872c19.json",
+					"name" : "bench",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "benchmark_src::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-benchmark_src-Debug-c8df24278251bcf0a487.json",
+					"name" : "benchmark_src",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gmock_src::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gmock_src-Debug-926049760e2a8fbac02b.json",
+					"name" : "gmock_src",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "googletest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-googletest-Debug-9f982ac11dd02bf2f337.json",
+					"name" : "googletest",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "gtest_src::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gtest_src-Debug-3936f636484d412d9024.json",
+					"name" : "gtest_src",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "join_query::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-join_query-Debug-2f72869e7cc5269c6306.json",
+					"name" : "join_query",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-f0493482d1b383698af3.json",
+					"name" : "main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_all-Debug-496b15c2aee66c6acdc9.json",
+					"name" : "test_all",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug",
+		"source" : "/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

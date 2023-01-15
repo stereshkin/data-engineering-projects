@@ -1,0 +1,13 @@
+# Target labels
+ benchmark_src
+# Source files and their labels
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/benchmark_src
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/benchmark_src.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/CMakeFiles/benchmark_src-complete.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-build.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-configure.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-download.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-install.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-mkdir.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-patch.rule
+/Users/sergeytereshkin/Desktop/fde-22-bonusproject-1/cmake-build-debug/vendor/benchmark/src/benchmark_src-stamp/benchmark_src-update.rule
